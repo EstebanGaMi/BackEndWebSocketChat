@@ -30,6 +30,14 @@
     updateLogMessage(messages);
   });
 
+  socket.on("new-client", () => {
+    Swal.fire({
+      text: "Nuevo usuario conectado",
+      toast: true,
+      position: "top-right",
+    });
+  });
+
   Swal.fire({
     title: "identificate por favor",
     input: "text",
